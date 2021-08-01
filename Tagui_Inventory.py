@@ -28,7 +28,7 @@ r.init(visual_automation = True, chrome_browser = True)
 r.url('https://excelcult.com/inventorymanagement/')
 r.click('//button[@id="btn-delete"]')
 
-insert_files=glob.glob('C:\\Users\\Nived\\Robots\\Inventory Management Robot\\Inventory Managment\\insert\\*.pdf')
+insert_files=glob.glob('insert\\*.pdf')
 
 for f in insert_files:
     data= data_extract(f)
@@ -37,7 +37,7 @@ for f in insert_files:
     r.type('//input[@id="price"]',data[2])
     r.click('//button[@id="btn-create"]')
 
-update_files=glob.glob('C:\\Users\\Nived\\Robots\\Inventory Management Robot\\Inventory Managment\\update\\*.pdf')
+update_files=glob.glob('update\\*.pdf')
 
 for f in update_files:
     data= data_extract(f)
@@ -47,7 +47,7 @@ for f in update_files:
     r.click('//button[@id="btn-update"]')
 
 
-delete_files=glob.glob('C:\\Users\\Nived\\Robots\\Inventory Management Robot\\Inventory Managment\\delete\\*.pdf')
+delete_files=glob.glob('delete\\*.pdf')
 
 for f in delete_files:
     data= data_extract(f)
